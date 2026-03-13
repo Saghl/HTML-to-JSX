@@ -59,7 +59,7 @@
                 includesText: 'Includes:',
                 features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
                 buttonText: 'Download',
-                buttonVariant: 'secondary',
+                buttonVariant: 'outline',
             };
             const proPlan = {
                 title: 'Pro',
@@ -72,9 +72,18 @@
                     'Maximum context windows',
                 ],
                 buttonText: 'Get Pro',
+                buttonVariant: 'secondary',
+            };
+            const organizationPlan = {
+                title: 'Pro+',
+                price: '$60/mo.',
+                includesText: 'Everything in Hobby, plus:',
+                features: [
+                    '3x usage on all OpenAI, Claude, Gemini models',
+                ],
+                buttonText: 'Get Pro+',
                 buttonVariant: 'primary',
             };
-
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
                 <>
@@ -84,6 +93,7 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...organizationPlan} />
                     </div>
                 </>
             );
