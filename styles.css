@@ -1,9 +1,11 @@
+/* Global reset: remove default browser spacing and make sizing predictable */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Full-page canvas: center the pricing cards on a soft neutral background */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* Horizontal layout wrapper that spaces cards evenly */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +26,7 @@ body {
     align-items: flex-start;
 }
 
+/* Base card shell: fixed width column with subtle rounded corners */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +38,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Stack for the title, price, and copy at the top of the card */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name styling: medium size, neutral weight, dark text */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +53,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: inline flex so amount and period share a baseline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +61,38 @@ body {
     align-items: baseline;
 }
 
+/* Numeric price amount: same color as the subdued price text */
 .card-price-amount {
     font-size: 20px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (/mo.) appears as a lighter, supporting label */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Content area below the price; bottom margin makes room above the button */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Small “Includes” label sitting above the feature list */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: remove bullets so we can design our own row layout */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Each feature row: align checkmark and copy on the same line */
 .features-list li {
     display: flex;
     align-items: flex-start;
@@ -88,6 +101,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon: small, aligned to the left with a bit of spacing */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +109,7 @@ body {
     font-weight: 400;
 }
 
+/* Shared button styling: pill shape, subtle neutral background, left-aligned */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,43 +124,52 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover state: slightly darker neutral to indicate interactivity */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Active state: keep the same darker neutral for pressed feedback */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button: high-contrast black background with white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Primary hover: lighten the black so the state change is noticeable */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Primary active: same as hover for a stable pressed state */
 .download-button.primary:active {
     background-color: #333;
 }
 
+/* Outline button: low-emphasis, bordered version of the pill */
 .download-button.outline {
     background-color: transparent;
     border: 1px solid #111;
     color: #111;
 }
 
+/* Outline hover: fill with a light neutral while keeping dark text */
 .download-button.outline:hover{
     background-color: #D8D6CE;
     color: #111;
 }
 
+/* Outline active: invert to dark background with white text on press */
 .download-button.outline:active{
     background-color: #111;
     color: #fff;
 }
 
+/* Fixed pill label that floats above the cards, centered at the top */
 .page-label {
     position: fixed;
     top: 16px;
@@ -159,6 +183,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Stronger text color for the “HTML version” label inside the pill */
 .page-label strong {
     color: #333;
 }
