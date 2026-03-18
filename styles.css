@@ -126,12 +126,12 @@ body {
 
 /* Hover state: slightly darker neutral to indicate interactivity */
 .download-button:hover {
-    background-color: #D8D6CE;
+    background-color: #D8D6CD;
 }
 
 /* Active state: keep the same darker neutral for pressed feedback */
 .download-button:active {
-    background-color: #D8D6CE;
+    background-color: #D8D6CD;
 }
 
 /* Primary button: high-contrast black background with white text */
@@ -153,20 +153,18 @@ body {
 /* Outline button: low-emphasis, bordered version of the pill */
 .download-button.outline {
     background-color: transparent;
-    border: 1px solid #111;
-    color: #111;
+    border: 1px solid #C2C1BA;
+    color: #333;
 }
 
 /* Outline hover: fill with a light neutral while keeping dark text */
 .download-button.outline:hover{
-    background-color: #D8D6CE;
-    color: #111;
+    background-color: #DBDBD7;
 }
 
 /* Outline active: invert to dark background with white text on press */
 .download-button.outline:active{
-    background-color: #111;
-    color: #fff;
+    background-color: #DBDBD7;
 }
 
 /* Fixed pill label that floats above the cards, centered at the top */
